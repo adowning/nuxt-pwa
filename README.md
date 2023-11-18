@@ -1,55 +1,61 @@
 # Create Google App
+
 Clone this repository and/or use it as a template for a website.
+
 - The [documentation/ guidelines](https://create-google-app.vercel.app) shows how to install, setup and publish it on Google Play.
 
 ## Package
+
 This repo can be downloaded or installed as a [package](https://github.com/lovkyndig?tab=packages&repo_name=create-google-app). I am using this package in [PWA Starter App](https://github.com/lovkyndig/pwa-starter-app), and all my other apps on Google Play.
 
 ## Futures
-| 100% Healt Score | Lighthouse => 99.6% |
-| --- | --- |
-|![](https://raw.githubusercontent.com/lovkyndig/create-google-app/main/public/img/webp/ahrefs-website-checker.webp) |![](https://raw.githubusercontent.com/lovkyndig/create-google-app/main/public/img/webp/lighthouse-report.webp)|  
+
+| 100% Healt Score                                                                                                    | Lighthouse => 99.6%                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| ![](https://raw.githubusercontent.com/lovkyndig/create-google-app/main/public/img/webp/ahrefs-website-checker.webp) | ![](https://raw.githubusercontent.com/lovkyndig/create-google-app/main/public/img/webp/lighthouse-report.webp) |
 
 1. _100% Health Score_ with [ahrefs website-checker](https://ahrefs.com/website-checker):[^1]
 2. 100% in _Accessibility_, _Best Practices_, _SEO_ and _PWA_ (Progressive Web App) on [Lighthouse-report](https://pagespeed.web.dev/). 98% on _Performance_. Total 99.6%.[^2]
 
-_Full search functionality_  
+_Full search functionality_
 
-3. Full search functionality with use of [pagefind](https://pagefind.app/). (Not in `offline`-mode)[^3]  
+3. Full search functionality with use of [pagefind](https://pagefind.app/). (Not in `offline`-mode)[^3]
 4. window.find()-function is used to continue searching in a article. (Not in `Edge`.)[^4]
 
-_Style and icons_  
+_Style and icons_
 
-5. Accordion style, all collapsed on start with better overview of content.[^5]  
-6. Advanced catalog or index to see the structure of the content in a hierarchy or graphical map.[^6]  
+5. Accordion style, all collapsed on start with better overview of content.[^5]
+6. Advanced catalog or index to see the structure of the content in a hierarchy or graphical map.[^6]
 7. Offline icons, [nuxt-svgo](https://www.npmjs.com/package/nuxt-svgo).[^7]
 
-_Helpers (functions/methods)_  
+_Helpers (functions/methods)_
 
-8. Providing helpers to all my functionalities (methods).[^8]  
-9. WebNotification can be used in this package to send msg to the user.[^9]  
-10. Typescript checker in developer-mode ([vue-tsc](https://www.npmjs.com/package/vue-tsc)).[^10]  
+8. Providing helpers to all my functionalities (methods).[^8]
+9. WebNotification can be used in this package to send msg to the user.[^9]
+10. Typescript checker in developer-mode ([vue-tsc](https://www.npmjs.com/package/vue-tsc)).[^10]
 11. Images in content is copied to public folder trough the _"copy-images-files"_-module. (Have to be done because of [an nuxt-content-issue](https://github.com/nuxt/content/issues/106#issuecomment-1002820342)).[^11]
 
-_Arrangement for PWA_  
+_Arrangement for PWA_
 
-12. Privacy policy statement with route, ready to be used on Google App Store.[^12]  
-13. [@vite-pwa/nuxt](https://www.npmjs.com/package/@vite-pwa/nuxt) is setting up the PWA. Manifest is loaded trough the settings in nuxt.config.[^13]  
-14. BubbleWrap guide. See assets/guide. Required to be read.[^14]  
+12. Privacy policy statement with route, ready to be used on Google App Store.[^12]
+13. [@vite-pwa/nuxt](https://www.npmjs.com/package/@vite-pwa/nuxt) is setting up the PWA. Manifest is loaded trough the settings in nuxt.config.[^13]
+14. BubbleWrap guide. See assets/guide. Required to be read.[^14]
 15. Hosting on [Vercel](https://vercel.com/docs/deployments/git/vercel-for-github).[^15]
 
-_Extra Futures_  
+_Extra Futures_
 
 16. Caching in dev-mode: Run `rss-sitemap.bat` after _build_ or _generate_.[16]
-17. [Vercel Analytics](https://vercel.com/analytics), can be used when hosted on vercel.[^17]  
+17. [Vercel Analytics](https://vercel.com/analytics), can be used when hosted on vercel.[^17]
 18. Verification of ownership with `google-site-verification`-file in _public_-folder, and code in `.env`-file.[^18]
 19. GitHub-Comments, [giscus](https://giscus.app).[^19]
 
 ## To do-list (plan)
+
 - Add [nuxt/ui](https://www.npmjs.com/package/@nuxt/ui) or/and add dark-light-theme-toggle.
 - Maybe add [Google Translate](https://www.npmjs.com/package/@google-translate-select/vue3) option (not auto-translate).
 
 ## License
+
 [MIT](./LICENSE)
 
 [^1]: Prov from 02.11.2023 - version 1.0.1-rc.15.
@@ -67,9 +73,11 @@ _Extra Futures_
 [^13]: PWA is the first step on the way to Google Store. Remember to host your site ([vercel](https://vercel.com/docs/deployments/git/vercel-for-github)). Se more in pkt 15 below.
 [^14]: Bubblewrap has to be used to create the aab-package before uploading it to Google App Store. - Bubblewrap are installed Globally on the local mashine, for use on development, because; - I'm using bubblewrap in a subfolder under the root, because the bubblewrap are creating so many files that have to be keeped away from the github-repo-files. - Guide-folder with links and info about using bubblewrap is added inside the assets-folder. - bubblewrap-folder is added to .gitignore-file. [Read more](https://create-google-app.vercel.app/article/create-and-upload/create-app/bubblewrap).
 [^15]: All public repos on github can be hosted on [vercel](https://vercel.com/docs/deployments/git/vercel-for-github) for free.
-[^16]: The `bat`-file is copying the _dev_-files to _public_-folder (and then it's working). To run _bat_-files in **Git-Bash** write `./rss-sitemap.bat` + enter. 
+[^16]: The `bat`-file is copying the _dev_-files to _public_-folder (and then it's working). To run _bat_-files in **Git-Bash** write `./rss-sitemap.bat` + enter.
 [^17]: Vercel Analytics don't use cookies and this app isn't using cookies at all, therefore it's not need for a plugin that pop up with a question if you accept cookies. See the [doc](https://create-google-app.vercel.app/article/setup-and-deploy/deploy/verification-and-analytics).
 [^18]: _google.site-verification_-file ([or code](https://create-google-app.vercel.app/article/setup-and-deploy/deploy/verification-and-analytics)) is necessary for indexing the pages in [google-search-console](https://search.google.com/search-console/about), before [Ahrefs website-checker](https://ahrefs.com/website-checker) can be used. [Read more](https://create-google-app.vercel.app/article/setup-and-deploy/deploy/verification-and-analytics).
 [^19]: Added in version 1.0.1 as component with [@giscus/vue](https://github.com/giscus/giscus-component/tree/main). The `repo-id` etc. have to be set in `app.config.ts`. The following _regeg pattern_ have to be added to _navigateFallbackDenylist_: `/^\/.*\\?giscus=.*/`, to get it works properly.
 
 Updated 16.11.2023
+
+bubblewrap init --manifest="https://nuxt-pwa-nine.vercel.app/manifest.webmanifest" --directory="bubblewrap

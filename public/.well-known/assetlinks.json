@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.vercel.nuxt_pwa_nine.twa",
+      "sha256_cert_fingerprints": [
+        "19:3F:C5:C8:C0:B4:A5:C4:87:53:99:35:27:DA:04:E2:7D:8A:00:56:33:6C:21:E1:F4:89:57:5B:72:07:CC:87"
+      ]
+    }
+  }
+]
